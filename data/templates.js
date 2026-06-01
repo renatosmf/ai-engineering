@@ -1,7 +1,8 @@
 /**
  * Slide HTML templates with i18n placeholders.
  * Placeholders: {{$key}} — resolved at runtime by template.service.js
- * Structure is language-independent; only data/strings.*.js files differ.
+ * Code blocks (<pre>/<code>) remain inline (not translatable).
+ * Structure is language-independent; only data/strings.*.js differ.
  */
 
 export const slideTemplates = [
@@ -177,52 +178,80 @@ export const slideTemplates = [
                     </div>
                     <div class="message ai" style="padding: 10px 14px; margin-bottom: 10px;">
                       <strong>{{$before-after.5}}</strong>
-                      {{$before-after.6}} <code>{{$before-after.7}}</code> {{$before-after.8}}
+                      {{$before-after.6}} <code>validateRegistration()</code> {{$before-after.7}}
                     </div>
                     <div class="message user fragment" style="padding: 10px 14px; margin-bottom: 10px;">
-                      <strong>{{$before-after.9}}</strong>
-                      {{$before-after.10}} <code>{{$before-after.11}}</code> {{$before-after.12}}
+                      <strong>{{$before-after.8}}</strong>
+                      {{$before-after.9}} <code>@Published</code> {{$before-after.10}}
                     </div>
                     <div class="message ai fragment" style="padding: 10px 14px;">
-                      <strong>{{$before-after.13}}</strong>
-                      {{$before-after.14}} <code>{{$before-after.15}}</code> {{$before-after.16}}
+                      <strong>{{$before-after.11}}</strong>
+                      {{$before-after.12}} <code>@Published var validationError</code> {{$before-after.13}}
                     </div>
                   </div>
                   <div class="card fragment fade-left" style="font-size: 0.85em;">
-                    <h4 style="font-size: 1.1em; margin-bottom: 12px;">{{$before-after.17}}</h4>
+                    <h4 style="font-size: 1.1em; margin-bottom: 12px;">{{$before-after.14}}</h4>
                     <ul style="font-size: 0.95em; line-height: 1.5; margin: 0;">
-                      <li style="margin-bottom: 8px;"><strong>{{$before-after.18}}</strong> {{$before-after.19}}</li>
-                      <li style="margin-bottom: 8px;"><strong>{{$before-after.20}}</strong> {{$before-after.21}}</li>
-                      <li style="margin-bottom: 8px;"><strong>{{$before-after.22}}</strong> {{$before-after.23}}</li>
-                      <li><strong>{{$before-after.24}}</strong> {{$before-after.25}} <code>{{$before-after.26}}</code>{{$before-after.27}}</li>
+                      <li style="margin-bottom: 8px;"><strong>{{$before-after.15}}</strong> {{$before-after.16}}</li>
+                      <li style="margin-bottom: 8px;"><strong>{{$before-after.17}}</strong> {{$before-after.18}}</li>
+                      <li style="margin-bottom: 8px;"><strong>{{$before-after.19}}</strong> {{$before-after.20}}</li>
+                      <li><strong>{{$before-after.21}}</strong> {{$before-after.22}} <code>@Published</code>{{$before-after.23}}</li>
                     </ul>
                     <div class="chip-row" style="margin-top: 14px; gap: 8px;">
-                      <span class="chip" style="font-size: 0.75em; padding: 6px 12px;">{{$before-after.28}}</span>
-                      <span class="chip" style="font-size: 0.75em; padding: 6px 12px;">{{$before-after.29}}</span>
-                      <span class="chip" style="font-size: 0.75em; padding: 6px 12px;">{{$before-after.30}}</span>
+                      <span class="chip" style="font-size: 0.75em; padding: 6px 12px;">{{$before-after.24}}</span>
+                      <span class="chip" style="font-size: 0.75em; padding: 6px 12px;">{{$before-after.25}}</span>
+                      <span class="chip" style="font-size: 0.75em; padding: 6px 12px;">{{$before-after.26}}</span>
                     </div>
                   </div>
                 </div>
               </div>
               <p class="fragment fade-up" style="text-align: center; margin-top: 24px; color: var(--muted); font-size: 0.8em;">
-                {{$before-after.31}}
+                {{$before-after.27}}
               </p>
             </section>
             
             <section data-auto-animate>
-              <span class="eyebrow">{{$before-after.32}}</span>
-              <h2>{{$before-after.33}}</h2>
+              <span class="eyebrow">{{$before-after.28}}</span>
+              <h2>{{$before-after.29}}</h2>
               <div style="max-width: 1100px; margin: 0 auto;">
                 <div class="grid-2" style="gap: 18px;">
                   <div class="card fragment fade-right">
-                    <h4 style="font-size: 1.05em;">{{$before-after.34}}</h4>
-<pre style="font-size: 0.5em; margin: 12px 0;"><code class="language-swift">{{$before-after.35}}</code></pre>
-                    <p class="muted" style="font-size: 0.8em; margin-top: 10px;">{{$before-after.36}}</p>
+                    <h4 style="font-size: 1.05em;">{{$before-after.30}}</h4>
+<pre style="font-size: 0.5em; margin: 12px 0;"><code class="language-swift">class RegistrationViewModel: ObservableObject {
+  @Published var email: String = ""
+  @Published var password: String = ""
+  
+  func register() {
+    // Direto sem validação
+    useCase.execute(
+      email: email,
+      password: password
+    )
+  }
+}</code></pre>
+                    <p class="muted" style="font-size: 0.8em; margin-top: 10px;">{{$before-after.31}}</p>
                   </div>
                   <div class="card fragment fade-left">
-                    <h4 style="font-size: 1.05em;">{{$before-after.37}}</h4>
-<pre style="font-size: 0.5em; margin: 12px 0;"><code class="language-swift">{{$before-after.38}}</code></pre>
-                    <p class="muted" style="font-size: 0.8em; margin-top: 10px;">{{$before-after.39}}</p>
+                    <h4 style="font-size: 1.05em;">{{$before-after.32}}</h4>
+<pre style="font-size: 0.5em; margin: 12px 0;"><code class="language-swift">class RegistrationViewModel: ObservableObject {
+  @Published var email: String = ""
+  @Published var password: String = ""
+  @Published var validationError: String?
+  
+  func register() {
+    guard email.contains("@"), 
+          email.contains(".") else {
+      validationError = "Email inválido"
+      return
+    }
+    guard password.count >= 8 else {
+      validationError = "Senha precisa ter 8+ caracteres"
+      return
+    }
+    useCase.execute(email: email, password: password)
+  }
+}</code></pre>
+                    <p class="muted" style="font-size: 0.8em; margin-top: 10px;">{{$before-after.33}}</p>
                   </div>
                 </div>
               </div>
@@ -256,11 +285,15 @@ export const slideTemplates = [
             <div class="compare" style="margin-top: 18px;">
               <div class="card fragment fade-right">
                 <h4>{{$common-mistakes.19}}</h4>
-<pre><code class="language-markdown">{{$common-mistakes.20}}</code></pre>
+<pre><code class="language-markdown">Crie a feature de tarefas.</code></pre>
               </div>
               <div class="card fragment fade-left">
-                <h4>{{$common-mistakes.21}}</h4>
-<pre><code class="language-markdown">{{$common-mistakes.22}}</code></pre>
+                <h4>{{$common-mistakes.20}}</h4>
+<pre><code class="language-markdown">Implemente a validação do POST /tasks.
+Contexto: handler em taskController.js e testes em taskController.test.js.
+Restrições: não mude o contrato da API nem a camada de persistência.
+Aceite: retornar 400 para título vazio e prioridade inválida.
+Entrega: diff + testes + breve justificativa das decisões.</code></pre>
               </div>
             </div>
           </section>`,
@@ -452,60 +485,75 @@ export const slideTemplates = [
                 <div class="flow" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
                   <div class="flow-box fragment fade-up" style="min-height: 120px;">
                     <h4>{{$solution-layers.2}}</h4>
-                    <p><code>{{$solution-layers.3}}</code> {{$solution-layers.4}} <code>{{$solution-layers.5}}</code><br>{{$solution-layers.6}}</p>
+                    <p><code>.ai/specs/</code> {{$solution-layers.3}} <code>.ai/rules/</code><br>{{$solution-layers.4}}</p>
                   </div>
                   <div class="flow-box fragment fade-up" style="min-height: 120px;">
-                    <h4>{{$solution-layers.7}}</h4>
-                    <p><code>{{$solution-layers.8}}</code> {{$solution-layers.9}} <code>{{$solution-layers.10}}</code><br>{{$solution-layers.11}}</p>
+                    <h4>{{$solution-layers.5}}</h4>
+                    <p><code>.ai/agents/</code> {{$solution-layers.6}} <code>.ai/skills/</code><br>{{$solution-layers.7}}</p>
                   </div>
                   <div class="flow-box fragment fade-up" style="min-height: 120px;">
-                    <h4>{{$solution-layers.12}}</h4>
-                    <p>{{$solution-layers.13}}<br>{{$solution-layers.14}}</p>
+                    <h4>{{$solution-layers.8}}</h4>
+                    <p>{{$solution-layers.9}}<br>{{$solution-layers.10}}</p>
                   </div>
                   <div class="flow-box fragment fade-up" style="min-height: 120px;">
-                    <h4>{{$solution-layers.15}}</h4>
-                    <p><code>{{$solution-layers.16}}</code> {{$solution-layers.17}} <code>{{$solution-layers.18}}</code><br>{{$solution-layers.19}}</p>
+                    <h4>{{$solution-layers.11}}</h4>
+                    <p><code>.ai/harness/</code> {{$solution-layers.12}} <code>.ai/gates/</code><br>{{$solution-layers.13}}</p>
                   </div>
                 </div>
               </div>
               <p class="fragment fade-up" style="text-align: center; margin-top: 30px; color: var(--muted); font-size: 0.8em;">
-                {{$solution-layers.20}}
+                {{$solution-layers.14}}
               </p>
             </section>
             
             <section data-auto-animate>
-              <span class="eyebrow">{{$solution-layers.21}}</span>
-              <h2>{{$solution-layers.22}} <code>{{$solution-layers.23}}</code></h2>
+              <span class="eyebrow">{{$solution-layers.15}}</span>
+              <h2>{{$solution-layers.16}} <code>.ai/</code></h2>
               <div style="display: grid; grid-template-columns: 1fr; gap: 20px; max-width: 900px; margin: 0 auto;">
                 <div class="card">
-                  <h4>{{$solution-layers.24}}</h4>
-<pre style="font-size: 0.6em; line-height: 1.4;"><code class="language-text">{{$solution-layers.25}}</code></pre>
+                  <h4>{{$solution-layers.17}}</h4>
+<pre style="font-size: 0.6em; line-height: 1.4;"><code class="language-text">.ai/
+├── README.md
+├── specs/          # Contratos e schemas
+│   ├── contracts/
+│   ├── api/
+│   └── schemas/
+├── rules/          # Regras declarativas
+├── agents/         # Agentes especializados
+├── skills/         # Skills reutilizáveis
+├── harness/        # Scripts de execução
+│   ├── pre-execution/
+│   ├── execution/
+│   └── post-execution/
+├── gates/          # Gates de qualidade
+├── governance/     # Governança e políticas
+└── knowledge/      # Base de conhecimento</code></pre>
                 </div>
               </div>
               <p class="fragment fade-up" style="text-align: center; margin-top: 20px; color: var(--muted); font-size: 0.8em;">
-                {{$solution-layers.26}}
+                {{$solution-layers.18}}
               </p>
             </section>
             
             <section data-auto-animate>
-              <span class="eyebrow">{{$solution-layers.27}}</span>
-              <h2>{{$solution-layers.28}}</h2>
+              <span class="eyebrow">{{$solution-layers.19}}</span>
+              <h2>{{$solution-layers.20}}</h2>
               <div class="stats" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px;">
                 <div class="stat-card fragment fade-up">
-                  <div class="value">{{$solution-layers.29}}</div>
-                  <div class="muted">{{$solution-layers.30}}</div>
+                  <div class="value">{{$solution-layers.21}}</div>
+                  <div class="muted">{{$solution-layers.22}}</div>
                 </div>
                 <div class="stat-card fragment fade-up">
-                  <div class="value">{{$solution-layers.31}}</div>
-                  <div class="muted">{{$solution-layers.32}}</div>
+                  <div class="value">{{$solution-layers.23}}</div>
+                  <div class="muted">{{$solution-layers.24}}</div>
                 </div>
                 <div class="stat-card fragment fade-up">
-                  <div class="value">{{$solution-layers.33}}</div>
-                  <div class="muted">{{$solution-layers.34}}</div>
+                  <div class="value">{{$solution-layers.25}}</div>
+                  <div class="muted">{{$solution-layers.26}}</div>
                 </div>
                 <div class="stat-card fragment fade-up">
-                  <div class="value">{{$solution-layers.35}}</div>
-                  <div class="muted">{{$solution-layers.36}}</div>
+                  <div class="value">{{$solution-layers.27}}</div>
+                  <div class="muted">{{$solution-layers.28}}</div>
                 </div>
               </div>
             </section>
@@ -536,15 +584,32 @@ export const slideTemplates = [
             
             <section data-auto-animate>
               <span class="eyebrow">{{$layer1-specify.14}}</span>
-              <h2>{{$layer1-specify.15}} <code>{{$layer1-specify.16}}</code></h2>
+              <h2>{{$layer1-specify.15}} <code>screen.contract.json</code></h2>
               <div style="max-width: 900px; margin: 0 auto;">
                 <div class="card">
-<pre style="font-size: 0.55em; line-height: 1.4;"><code class="language-json">{{$layer1-specify.17}}</code></pre>
+<pre style="font-size: 0.55em; line-height: 1.4;"><code class="language-json">{
+  "required": ["structure", "properties", "methods"],
+  "properties": {
+    "structure": {
+      "properties": {
+        "type": { "const": "struct" },
+        "name": { "pattern": "^[A-Z][A-Za-z0-9]*Screen$" }
+      }
+    },
+    "properties": {
+      "viewModel": {
+        "properties": {
+          "wrapper": { "const": "@ObservedObject" }
+        }
+      }
+    }
+  }
+}</code></pre>
                 </div>
                 <div class="chip-row fragment fade-up" style="margin-top: 20px; justify-content: center;">
+                  <span class="chip">{{$layer1-specify.16}}</span>
+                  <span class="chip">{{$layer1-specify.17}}</span>
                   <span class="chip">{{$layer1-specify.18}}</span>
-                  <span class="chip">{{$layer1-specify.19}}</span>
-                  <span class="chip">{{$layer1-specify.20}}</span>
                 </div>
               </div>
             </section>
@@ -558,18 +623,30 @@ export const slideTemplates = [
                 <ul>
                   <li><strong>{{$layer2-design.3}}</strong> {{$layer2-design.4}}</li>
                   <li><strong>{{$layer2-design.5}}</strong> {{$layer2-design.6}}</li>
-                  <li><strong>{{$layer2-design.7}}</strong> {{$layer2-design.8}} <code>{{$layer2-design.9}}</code> {{$layer2-design.10}}</li>
-                  <li><strong>{{$layer2-design.11}}</strong> {{$layer2-design.12}}</li>
+                  <li><strong>{{$layer2-design.7}}</strong> {{$layer2-design.8}} <code>feature-implementation</code> {{$layer2-design.9}}</li>
+                  <li><strong>{{$layer2-design.10}}</strong> {{$layer2-design.11}}</li>
                 </ul>
                 <div class="callout">
-                  <h4>{{$layer2-design.13}}</h4>
-                  <p>{{$layer2-design.14}}</p>
+                  <h4>{{$layer2-design.12}}</h4>
+                  <p>{{$layer2-design.13}}</p>
                 </div>
               </div>
               <div class="fragment fade-left">
-                <h4>{{$layer2-design.15}}</h4>
-<pre><code class="language-yaml">{{$layer2-design.16}}</code></pre>
-                <p class="muted">{{$layer2-design.17}}</p>
+                <h4>{{$layer2-design.14}}</h4>
+<pre><code class="language-yaml"># .ai/agents/feature-implementation.agent.md
+name: feature-implementation
+read_and_follow:
+  - .ai/skills/feature-implementation/SKILL.md
+focus:
+  - architecture patterns
+  - required tests
+  - validation evidence
+
+# .ai/skills/feature-implementation/agents/openai.yaml
+interface:
+  display_name: "Feature Implementation"
+  short_description: "Implement new capabilities with quality gates"</code></pre>
+                <p class="muted">{{$layer2-design.15}}</p>
               </div>
             </div>
           </section>`,
@@ -592,11 +669,15 @@ export const slideTemplates = [
               </div>
               <div class="fragment fade-left">
                 <h4>{{$layer3-tasks.13}}</h4>
-<pre><code class="language-text">{{$layer3-tasks.14}}</code></pre>
+<pre><code class="language-text">Implementation Agent → submits → Validation Agent
+                               ├─ Load contracts
+                               ├─ Load rules
+                               ├─ Run checks
+                               └─ Report violations</code></pre>
                 <div class="chip-row">
+                  <span class="chip">{{$layer3-tasks.14}}</span>
                   <span class="chip">{{$layer3-tasks.15}}</span>
                   <span class="chip">{{$layer3-tasks.16}}</span>
-                  <span class="chip">{{$layer3-tasks.17}}</span>
                 </div>
               </div>
             </div>
@@ -616,18 +697,29 @@ export const slideTemplates = [
               </div>
               <div class="card fragment fade-left">
                 <h4>{{$layer4-execute.11}}</h4>
-<pre><code class="language-bash">{{$layer4-execute.12}}</code></pre>
+<pre><code class="language-bash">validate_contracts.sh
+
+validate_naming "$file" "^[A-Z][A-Za-z0-9]*(Screen|ViewModel)$"
+validate_layering "$file" "presentation"
+validate_architecture_compliance "$file"
+
+if [ $VIOLATIONS -eq 0 ]; then
+  echo "✅ All contracts validated successfully"
+else
+  echo "❌ Fix violations before merge"
+  exit 1
+fi</code></pre>
                 <ul>
-                  <li><strong>{{$layer4-execute.13}}</strong> {{$layer4-execute.14}}</li>
-                  <li><strong>{{$layer4-execute.15}}</strong> {{$layer4-execute.16}}</li>
-                  <li><strong>{{$layer4-execute.17}}</strong> {{$layer4-execute.18}}</li>
+                  <li><strong>{{$layer4-execute.12}}</strong> {{$layer4-execute.13}}</li>
+                  <li><strong>{{$layer4-execute.14}}</strong> {{$layer4-execute.15}}</li>
+                  <li><strong>{{$layer4-execute.16}}</strong> {{$layer4-execute.17}}</li>
                 </ul>
               </div>
             </div>
             <div class="stats" style="margin-top: 18px;">
-              <div class="stat-card fragment fade-up"><div class="value">{{$layer4-execute.19}}</div><div class="muted">{{$layer4-execute.20}}</div></div>
-              <div class="stat-card fragment fade-up"><div class="value">{{$layer4-execute.21}}</div><div class="muted">{{$layer4-execute.22}}</div></div>
-              <div class="stat-card fragment fade-up"><div class="value">{{$layer4-execute.23}}</div><div class="muted">{{$layer4-execute.24}}</div></div>
+              <div class="stat-card fragment fade-up"><div class="value">{{$layer4-execute.18}}</div><div class="muted">{{$layer4-execute.19}}</div></div>
+              <div class="stat-card fragment fade-up"><div class="value">{{$layer4-execute.20}}</div><div class="muted">{{$layer4-execute.21}}</div></div>
+              <div class="stat-card fragment fade-up"><div class="value">{{$layer4-execute.22}}</div><div class="muted">{{$layer4-execute.23}}</div></div>
             </div>
           </section>`,
   `<section>
@@ -642,23 +734,23 @@ export const slideTemplates = [
               <div class="timeline-step fragment fade-up">
                 <div class="step-number">{{$e2e-example.5}}</div>
                 <h4>{{$e2e-example.6}}</h4>
-                <p>{{$e2e-example.7}} <code>{{$e2e-example.8}}</code> {{$e2e-example.9}}</p>
+                <p>{{$e2e-example.7}} <code>feature-implementation</code> {{$e2e-example.8}}</p>
               </div>
               <div class="timeline-step fragment fade-up">
-                <div class="step-number">{{$e2e-example.10}}</div>
-                <h4>{{$e2e-example.11}}</h4>
-                <p>{{$e2e-example.12}}</p>
+                <div class="step-number">{{$e2e-example.9}}</div>
+                <h4>{{$e2e-example.10}}</h4>
+                <p>{{$e2e-example.11}}</p>
               </div>
               <div class="timeline-step fragment fade-up">
-                <div class="step-number">{{$e2e-example.13}}</div>
-                <h4>{{$e2e-example.14}}</h4>
-                <p>{{$e2e-example.15}}</p>
+                <div class="step-number">{{$e2e-example.12}}</div>
+                <h4>{{$e2e-example.13}}</h4>
+                <p>{{$e2e-example.14}}</p>
               </div>
             </div>
             <div class="chip-row" style="margin-top: 18px; justify-content: center;">
+              <span class="badge success">{{$e2e-example.15}}</span>
               <span class="badge success">{{$e2e-example.16}}</span>
               <span class="badge success">{{$e2e-example.17}}</span>
-              <span class="badge success">{{$e2e-example.18}}</span>
             </div>
           </section>`,
   `<section>
