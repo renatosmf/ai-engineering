@@ -1,0 +1,608 @@
+/**
+ * English (US) translation strings.
+ * Keys match {{$key}} placeholders in data/templates.js.
+ */
+
+export const locale = 'en-US';
+
+export const strings = {
+  // — Meta —
+  'meta.title': 'AI-Assisted Development',
+  'meta.metaDescription': 'Reveal.js presentation about AI-assisted development for developers who are new to the topic.',
+  'meta.selectorLabel': 'Language',
+  'meta.footer': 'Tip: press <strong>S</strong> for speaker view, <strong>F</strong> for fullscreen, or use <strong>?print-pdf</strong> for print layout.',
+  'meta.htmlLang': 'en-US',
+
+  // — Hero —
+  'hero.0': '🤝 Engineering with AI',
+  'hero.1': 'AI-Assisted Development',
+  'hero.2': 'A practical introduction for people who are new to the topic: what AI is good at, where it fails, how to guide it, and how to validate without lowering quality.',
+  'hero.3': '🇺🇸 Content in EN-US',
+  'hero.4': '🧭 Real walkthrough',
+  'hero.5': '✅ Contracts + validation',
+  'hero.6': '🛠️ Before/after examples',
+  'hero.7': 'Who is this for?',
+  'hero.8': 'Developers, tech leads, QA, and product managers who want to use AI in a safe and genuinely useful way — without relying on magic.',
+  'hero.9': 'Week 1',
+  'hero.10': 'Focus on small, repetitive, well-defined tasks',
+  'hero.11': '2x–4x',
+  'hero.12': 'Common gain in first drafts when the request is clear',
+  'hero.13': '0%',
+  'hero.14': 'Reduction in human responsibility for architecture, risk, and release',
+  'hero.15': 'Highest value',
+  'hero.16': 'When prompts, context, examples, and tests are aligned',
+
+  // — Why It Matters —
+  'why-it-matters.0': '🎯 Why does this matter?',
+  'why-it-matters.1': 'O problema não é “escrever código”. É entregar mudança confiável.',
+  'why-it-matters.2': 'Without structured assistance',
+  'why-it-matters.3': 'Time is lost on boilerplate, repetitive tests, and delayed documentation.',
+  'why-it-matters.4': 'Context is scattered across tickets, chat, wiki pages, and pull requests.',
+  'why-it-matters.5': 'It is easier to miss validations, business rules, and edge cases.',
+  'why-it-matters.6': 'Pressure for speed turns into shortcuts — and rework grows.',
+  'why-it-matters.7': 'With well-guided assistance',
+  'why-it-matters.8': 'AI accelerates drafts, tests, refactors, and documentation.',
+  'why-it-matters.9': 'The team makes context, criteria, and contracts explicit earlier.',
+  'why-it-matters.10': 'Validation gets stronger: tests, linters, contracts, and independent review.',
+  'why-it-matters.11': 'The real gain shows up in validated throughput, not lines of code.',
+  'why-it-matters.12': 'Desenvolvimento assistido por IA não é “delegar para a IA”. É usar a IA como uma parceira de execução dentro de um processo disciplinado.',
+
+  // — Fundamentals —
+  'fundamentals.0': '📚 Fundamentals',
+  'fundamentals.1': 'Four concepts that unlock the topic for beginners',
+  'fundamentals.2': '🤖 What is an AI agent?',
+  'fundamentals.3': 'Pense em um',
+  'fundamentals.4': 'estagiário muito rápido',
+  'fundamentals.5': ': ele produz bastante, mas precisa de objetivo claro, contexto, limites e revisão.',
+  'fundamentals.6': '💬 What is a prompt?',
+  'fundamentals.7': 'É a instrução de trabalho. Quanto melhor o pedido, maior a chance de receber algo útil, reproduzível e fácil de validar.',
+  'fundamentals.8': '📐 Contratos + validação',
+  'fundamentals.9': 'São as regras do jogo: schema, exemplos, critérios de aceite, testes e checagens automáticas que dizem o que está certo.',
+  'fundamentals.10': '🧠 AI writing code ≠ AI-assisted development',
+  'fundamentals.11': 'Gerar código é só uma etapa. Desenvolvimento assistido inclui contexto, restrições, verificação e decisão humana.',
+  'fundamentals.12': '“IA escrevendo código”',
+  'fundamentals.13': 'Pedido vago',
+  'fundamentals.14': 'Resposta rápida',
+  'fundamentals.15': 'Pouca rastreabilidade',
+  'fundamentals.16': 'Fácil parecer certo e estar errado',
+  'fundamentals.17': '“Desenvolvimento assistido por IA”',
+  'fundamentals.18': 'Pedido + contexto + contrato',
+  'fundamentals.19': 'Resposta iterativa',
+  'fundamentals.20': 'Testes e evidências',
+  'fundamentals.21': 'Humano decide o que entra em produção',
+
+  // — Visual Concept —
+  'visual-concept.0': '🕸️ Visual model',
+  'visual-concept.1': 'How agents, contracts, and validation work together',
+  'visual-concept.2': '📝 Pessoa desenvolvedora',
+  'visual-concept.3': 'Define objetivo, contexto, limites, arquivos afetados e critérios de aceite.',
+  'visual-concept.4': '🤖 Agente de execução',
+  'visual-concept.5': 'Rascunha código, testes, docs e sugere próximos passos.',
+  'visual-concept.6': '📐 Contratos',
+  'visual-concept.7': 'OpenAPI, schema, exemplos, convenções do time e definição de pronto.',
+  'visual-concept.8': '✅ Validação',
+  'visual-concept.9': 'Lint, testes, revisão humana, revisão automatizada e comparação com o esperado.',
+  'visual-concept.10': '🚀 Entrega',
+  'visual-concept.11': 'Somente o que passou pelos critérios vira PR, merge e release.',
+  'visual-concept.12': 'Por que contratos importam?',
+  'visual-concept.13': 'Sem contrato, a IA preenche lacunas “adivinhando”. Com contrato, ela trabalha sobre algo verificável.',
+  'visual-concept.14': 'Por que separar geração e validação?',
+  'visual-concept.15': 'Quem cria a resposta não deve ser o único juiz da própria resposta.',
+  'visual-concept.16': 'Por que ainda existe revisão humana?',
+  'visual-concept.17': 'Porque risco, contexto do negócio, trade-offs e priorização continuam sendo responsabilidade do time.',
+
+  // — Walkthrough —
+  'walkthrough.0': '🧭 Step-by-Step Walkthrough',
+  'walkthrough.1': 'Como uma pessoa desenvolvedora realmente usaria esse modelo',
+  'walkthrough.2': '1',
+  'walkthrough.3': 'Escolha uma tarefa pequena',
+  'walkthrough.4': 'Ex.: ajustar validação em ViewModel, criar teste unitário XCTest, adicionar UseCase simples.',
+  'walkthrough.5': '2',
+  'walkthrough.6': 'Monte o contexto mínimo',
+  'walkthrough.7': 'Arquivos relevantes, regra de negócio, formato esperado, restrições técnicas e exemplos.',
+  'walkthrough.8': '3',
+  'walkthrough.9': 'Peça um primeiro rascunho',
+  'walkthrough.10': 'Prompt objetivo, com limites claros: o que pode mudar, o que não pode e como validar.',
+  'walkthrough.11': '4',
+  'walkthrough.12': 'Itere com evidência',
+  'walkthrough.13': 'Peça correções com base em erro real, teste falhando, diff específico ou lacuna observada.',
+  'walkthrough.14': '5',
+  'walkthrough.15': 'Valide antes de aceitar',
+  'walkthrough.16': 'Revise o diff, rode testes, confirme critérios de aceite e registre o que foi aprendido.',
+  'walkthrough.17': 'Por que esse fluxo funciona?',
+  'walkthrough.18': 'Porque ele transforma um pedido subjetivo em um ciclo observável: intenção → geração → evidência → ajuste → aceite.',
+
+  // — Before After —
+  'before-after.0': '💻 Before / After',
+  'before-after.1': 'Practical example: iOS development with AI',
+  'before-after.2': 'Conversa com IA',
+  'before-after.3': 'Dev iOS',
+  'before-after.4': 'Adicione validação no ViewModel de cadastro. Valide email válido e senha com 8+ caracteres, mantenha MVVM-C, escreva testes XCTest.',
+  'before-after.5': 'IA',
+  'before-after.6': 'Vou criar',
+  'before-after.7': 'validateRegistration()',
+  'before-after.8': 'no ViewModel, retornar estados de erro específicos e cobrir os cenários com XCTest.',
+  'before-after.9': 'Dev iOS',
+  'before-after.10': 'Exponha estados via',
+  'before-after.11': '@Published',
+  'before-after.12': 'para binding no SwiftUI.',
+  'before-after.13': 'IA',
+  'before-after.14': 'Adicionei',
+  'before-after.15': '@Published var validationError',
+  'before-after.16': 'e alinhei com apresentação de alert.',
+  'before-after.17': 'Por que funciona?',
+  'before-after.18': 'Escopo:',
+  'before-after.19': 'só ViewModel, não mexe em View/UseCase.',
+  'before-after.20': 'Arquitetura:',
+  'before-after.21': 'mantém MVVM-C.',
+  'before-after.22': 'Testes:',
+  'before-after.23': 'evidência via XCTest.',
+  'before-after.24': 'Binding:',
+  'before-after.25': 'SwiftUI direto via',
+  'before-after.26': '@Published',
+  'before-after.27': '.',
+  'before-after.28': '🔒 Escopo limitado',
+  'before-after.29': '🧪 Testes XCTest',
+  'before-after.30': '🏗️ MVVM-C',
+  'before-after.31': '↓ Veja o código antes/depois',
+  'before-after.32': '💻 Before / After',
+  'before-after.33': 'Código iOS: Validação no ViewModel',
+  'before-after.34': '❌ Antes: sem validação',
+  'before-after.35': 'class RegistrationViewModel: ObservableObject {
+  @Published var email: String = ""
+  @Published var password: String = ""
+  
+  func register() {
+    // Direto sem validação
+    useCase.execute(
+      email: email,
+      password: password
+    )
+  }
+}',
+  'before-after.36': 'Problema: aceita valores inválidos.',
+  'before-after.37': '✅ Depois: com validação',
+  'before-after.38': 'class RegistrationViewModel: ObservableObject {
+  @Published var email: String = ""
+  @Published var password: String = ""
+  @Published var validationError: String?
+  
+  func register() {
+    guard email.contains("@"), 
+          email.contains(".") else {
+      validationError = "Email inválido"
+      return
+    }
+    guard password.count >= 8 else {
+      validationError = "Senha precisa ter 8+ caracteres"
+      return
+    }
+    useCase.execute(email: email, password: password)
+  }
+}',
+  'before-after.39': 'Melhoria: validação + binding para alert.',
+
+  // — Common Mistakes —
+  'common-mistakes.0': '⚠️ Common mistakes',
+  'common-mistakes.1': 'Where beginners usually stumble — and how to avoid it',
+  'common-mistakes.2': 'Erros frequentes',
+  'common-mistakes.3': '“Faça isso para mim” sem contexto, arquivos, regras ou definição de pronto.',
+  'common-mistakes.4': 'Aceitar a primeira resposta só porque ela compila ou parece elegante.',
+  'common-mistakes.5': 'Pedir uma mudança grande demais logo de cara.',
+  'common-mistakes.6': 'Não informar limites: segurança, arquitetura, padrões do time, performance.',
+  'common-mistakes.7': 'Usar IA para decidir regra de negócio que o time ainda não definiu.',
+  'common-mistakes.8': 'Dicas para prompts melhores',
+  'common-mistakes.9': 'Contexto:',
+  'common-mistakes.10': 'diga o objetivo, os arquivos e a regra de negócio.',
+  'common-mistakes.11': 'Restrições:',
+  'common-mistakes.12': 'informe o que não pode mudar.',
+  'common-mistakes.13': 'Evidência:',
+  'common-mistakes.14': 'peça testes, cenários e critérios de aceite.',
+  'common-mistakes.15': 'Formato:',
+  'common-mistakes.16': 'peça diff, checklist, plano ou explicação curta.',
+  'common-mistakes.17': 'Iteração:',
+  'common-mistakes.18': 'corrija com base em fatos, não em “tenta de novo”.',
+  'common-mistakes.19': 'Prompt fraco',
+  'common-mistakes.20': 'Crie a feature de tarefas.',
+  'common-mistakes.21': 'Prompt melhor',
+  'common-mistakes.22': 'Implemente a validação do POST /tasks.
+Contexto: handler em taskController.js e testes em taskController.test.js.
+Restrições: não mude o contrato da API nem a camada de persistência.
+Aceite: retornar 400 para título vazio e prioridade inválida.
+Entrega: diff + testes + breve justificativa das decisões.',
+
+  // — Getting Started —
+  'getting-started.0': '🚀 Getting Started',
+  'getting-started.1': 'Primeiros 5 passos para começar de forma segura',
+  'getting-started.2': '1',
+  'getting-started.3': 'Escolha um caso de baixo risco',
+  'getting-started.4': 'Por exemplo: ajustar validação em ViewModel, criar teste unitário XCTest, adicionar função de UseCase simples.',
+  'getting-started.5': '2',
+  'getting-started.6': 'Defina um contrato mínimo',
+  'getting-started.7': 'Payload, critérios de aceite, exemplos de entrada e saída, ou pelo menos uma checklist.',
+  'getting-started.8': '3',
+  'getting-started.9': 'Monte um prompt reutilizável',
+  'getting-started.10': 'Guarde um template com objetivo, contexto, restrições, evidência e formato de entrega.',
+  'getting-started.11': '4',
+  'getting-started.12': 'Valide sempre do mesmo jeito',
+  'getting-started.13': 'Diff, lint, testes, checklist de revisão e critérios de aceite explícitos.',
+  'getting-started.14': '5',
+  'getting-started.15': 'Capture o aprendizado',
+  'getting-started.16': 'Anote quais prompts funcionaram, onde a IA errou e quais guardrails faltaram.',
+  'getting-started.17': 'Regra prática',
+  'getting-started.18': 'Comece com',
+  'getting-started.19': 'pequenas entregas repetíveis',
+  'getting-started.20': '. Escalar cedo demais costuma gerar falsa confiança e retrabalho.',
+
+  // — First Week —
+  'first-week.0': '📈 First week',
+  'first-week.1': 'What to expect and how to measure whether it works',
+  'first-week.2': 'Expectativa realista',
+  'first-week.3': 'Você vai ganhar velocidade em rascunho, mas ainda gastar tempo aprendendo a pedir melhor e revisar melhor.',
+  'first-week.4': 'Sinal positivo',
+  'first-week.5': 'Mais clareza no problema, mais testes saindo junto e menos tempo em tarefas repetitivas.',
+  'first-week.6': 'Sinal de alerta',
+  'first-week.7': 'Muito texto gerado, pouca validação, PRs barulhentos e sensação de que o time está “apagando incêndio”.',
+  'first-week.8': 'Métrica',
+  'first-week.9': 'Como observar',
+  'first-week.10': 'Interpretação',
+  'first-week.11': 'Tempo até o primeiro rascunho útil',
+  'first-week.12': 'Minutos entre abrir a tarefa e ter algo revisável',
+  'first-week.13': 'Deve cair rápido nas tarefas bem definidas',
+  'first-week.14': 'Retrabalho após revisão',
+  'first-week.15': 'Número de correções relevantes por PR',
+  'first-week.16': 'Se sobe muito, o prompt ou o contrato estão fracos',
+  'first-week.17': 'Testes adicionados por mudança',
+  'first-week.18': 'Quantidade e relevância dos cenários cobertos',
+  'first-week.19': 'Bom uso de IA aumenta evidência, não só produção',
+  'first-week.20': 'Lead time de tarefas repetitivas',
+  'first-week.21': 'Comparação antes/depois em issues parecidas',
+  'first-week.22': 'Melhora real aparece em tarefas frequentes',
+
+  // — Operational Model —
+  'operational-model.0': '🏗️ Operating model',
+  'operational-model.1': 'Recommended framework for an early-stage team',
+  'operational-model.2': '1. Tarefa bem definida',
+  'operational-model.3': 'Objetivo, contexto, critérios de aceite e risco conhecido.',
+  'operational-model.4': '2. Prompt com contrato',
+  'operational-model.5': 'Instrução clara, limites técnicos e evidência esperada.',
+  'operational-model.6': '3. Agente executa',
+  'operational-model.7': 'Gera proposta de código, testes, documentação ou revisão.',
+  'operational-model.8': '4. Validadores independentes',
+  'operational-model.9': 'Testes, lint, review automatizado, checklist humana.',
+  'operational-model.10': '5. Time aprende',
+  'operational-model.11': 'Ajusta templates, melhora prompts e reduz erro recorrente.',
+  'operational-model.12': '🙋 Papel da pessoa desenvolvedora',
+  'operational-model.13': 'Definir problema, decidir trade-offs, revisar o diff e assumir a entrega.',
+  'operational-model.14': '🤖 Papel da IA',
+  'operational-model.15': 'Acelerar execução, sugerir alternativas e reduzir trabalho repetitivo.',
+  'operational-model.16': '🛡️ Papel do processo',
+  'operational-model.17': 'Evitar que velocidade vire erro caro por falta de validação.',
+
+  // — Tradeoffs Practices —
+  'tradeoffs-practices.0': '⚖️ Trade-offs and best practices',
+  'tradeoffs-practices.1': 'What mature teams do differently',
+  'tradeoffs-practices.2': 'Boas práticas',
+  'tradeoffs-practices.3': 'Começam por problemas bem delimitados.',
+  'tradeoffs-practices.4': 'Usam templates de prompt e checklists de validação.',
+  'tradeoffs-practices.5': 'Separam geração, revisão e aceite.',
+  'tradeoffs-practices.6': 'Medem throughput validado e taxa de retrabalho.',
+  'tradeoffs-practices.7': 'Tratam prompt e contrato como ativos do time.',
+  'tradeoffs-practices.8': 'Trade-offs reais',
+  'tradeoffs-practices.9': 'Mais velocidade inicial pode exigir mais disciplina de revisão.',
+  'tradeoffs-practices.10': 'Prompts ruins escalam erro mais rápido.',
+  'tradeoffs-practices.11': 'Sem contrato, a IA parece criativa; com contrato, ela fica confiável.',
+  'tradeoffs-practices.12': 'O ROI cai quando o trabalho é ambíguo ou a validação é fraca.',
+  'tradeoffs-practices.13': 'O maior ganho costuma vir de documentação, testes e tarefas repetíveis.',
+  'tradeoffs-practices.14': 'Pergunta-chave para o time:',
+  'tradeoffs-practices.15': '“Estamos ficando mais rápidos com a mesma confiança — ou só mais rápidos para gerar retrabalho?”',
+
+  // — Part2 Intro —
+  'part2-intro.0': '🧩 Part 2',
+  'part2-intro.1': 'Part 2: AI-Driven Development Architecture',
+  'part2-intro.2': 'Nesta parte, a proposta é mostrar como times podem estruturar a adoção de IA de forma previsível: introdução dos conceitos, arquitetura em camadas, abordagem orientada por especificação e validação por harness.',
+  'part2-intro.3': '🧠 Conceitos fundamentais',
+  'part2-intro.4': '🏗️ Arquitetura em camadas',
+  'part2-intro.5': '📐 Abordagem spec-driven',
+  'part2-intro.6': '🧪 Harness de validação',
+  'part2-intro.7': 'O que vamos cobrir',
+  'part2-intro.8': '1',
+  'part2-intro.9': 'Por que a interação com IA quebra sem estrutura',
+  'part2-intro.10': '2',
+  'part2-intro.11': 'Arquitetura proposta em 4 camadas para adoção',
+  'part2-intro.12': '3',
+  'part2-intro.13': 'Como validar com contratos, agentes e gates',
+  'part2-intro.14': '4',
+  'part2-intro.15': 'Benefícios, trade-offs e caminho prático de adoção',
+
+  // — The Problem —
+  'the-problem.0': '⚠️ The Problem',
+  'the-problem.1': 'Without architecture, AI adoption becomes inconsistent and hard to scale',
+  'the-problem.2': 'Estado atual mais comum',
+  'the-problem.3': 'Documentação espalhada entre wiki, PRs, exemplos antigos e mensagens soltas.',
+  'the-problem.4': 'Cada pessoa interage com IA de um jeito diferente, sem padrão compartilhado.',
+  'the-problem.5': 'Não existe enforcement automático para arquitetura, testes ou convenções.',
+  'the-problem.6': 'Dor operacional',
+  'the-problem.7': 'Review manual vira gargalo de qualidade.',
+  'the-problem.8': 'Resultados gerados pela IA ficam inconsistentes entre tarefas parecidas.',
+  'the-problem.9': 'Conhecimento crítico permanece tribal, não estruturado.',
+  'the-problem.10': 'Tempo',
+  'the-problem.11': 'Mais ciclos de revisão e retrabalho para alinhar o output.',
+  'the-problem.12': 'Bugs',
+  'the-problem.13': 'Falhas repetidas escapam quando não há validação objetiva.',
+  'the-problem.14': 'Dívida técnica',
+  'the-problem.15': 'Padrões se degradam quando cada entrega segue um caminho diferente.',
+
+  // — Solution Layers —
+  'solution-layers.0': '🏗️ Proposed Solution',
+  'solution-layers.1': 'A 4-layer architecture that makes AI structured, declarative, auditable, and enforceable',
+  'solution-layers.2': '1. Specify',
+  'solution-layers.3': '.ai/specs/',
+  'solution-layers.4': '+',
+  'solution-layers.5': '.ai/rules/',
+  'solution-layers.6': 'Define o que deve ser verdade.',
+  'solution-layers.7': '2. Design',
+  'solution-layers.8': '.ai/agents/',
+  'solution-layers.9': '+',
+  'solution-layers.10': '.ai/skills/',
+  'solution-layers.11': 'Define como a IA deve trabalhar.',
+  'solution-layers.12': '3. Tasks',
+  'solution-layers.13': 'Validação independente',
+  'solution-layers.14': 'Separa execução de julgamento.',
+  'solution-layers.15': '4. Execute',
+  'solution-layers.16': '.ai/harness/',
+  'solution-layers.17': '+',
+  'solution-layers.18': '.ai/gates/',
+  'solution-layers.19': 'Executa checks e bloqueia violações.',
+  'solution-layers.20': '↓ Veja a estrutura de pastas proposta',
+  'solution-layers.21': '🏗️ Estrutura proposta',
+  'solution-layers.22': 'Organização da pasta',
+  'solution-layers.23': '.ai/',
+  'solution-layers.24': 'Estrutura de pastas',
+  'solution-layers.25': '.ai/
+├── README.md
+├── specs/          # Contratos e schemas
+│   ├── contracts/
+│   ├── api/
+│   └── schemas/
+├── rules/          # Regras declarativas
+├── agents/         # Agentes especializados
+├── skills/         # Skills reutilizáveis
+├── harness/        # Scripts de execução
+│   ├── pre-execution/
+│   ├── execution/
+│   └── post-execution/
+├── gates/          # Gates de qualidade
+├── governance/     # Governança e políticas
+└── knowledge/      # Base de conhecimento',
+  'solution-layers.26': '↓ Veja os benefícios desta abordagem',
+  'solution-layers.27': '🏗️ Benefícios da arquitetura',
+  'solution-layers.28': 'Por que esta estrutura funciona',
+  'solution-layers.29': 'Estruturada',
+  'solution-layers.30': 'Responsabilidades explícitas e fáceis de localizar.',
+  'solution-layers.31': 'Declarativa',
+  'solution-layers.32': 'Regras e contratos descrevem o que precisa acontecer.',
+  'solution-layers.33': 'Auditável',
+  'solution-layers.34': 'É possível rastrear agente, regra, gate e evidência.',
+  'solution-layers.35': 'Enforceable',
+  'solution-layers.36': 'Adoção deixa de depender só de boa vontade e passa a ter bloqueios objetivos.',
+
+  // — Layer1 Specify —
+  'layer1-specify.0': '1️⃣ Layer 1 · SPECIFY',
+  'layer1-specify.1': 'Spec-driven development starts by defining contracts and rules before execution',
+  'layer1-specify.2': 'O que é e por que importa',
+  'layer1-specify.3': 'O que é:',
+  'layer1-specify.4': 'contratos em JSON Schema e regras em YAML.',
+  'layer1-specify.5': 'Por que:',
+  'layer1-specify.6': 'validação declarativa, feedback rápido e menos ambiguidade.',
+  'layer1-specify.7': 'Exemplo:',
+  'layer1-specify.8': 'contratos de Screen e ViewModel descrevem nome e responsabilidades.',
+  'layer1-specify.9': 'Indústria:',
+  'layer1-specify.10': 'OpenAPI, JSON Schema e desenvolvimento contract-first.',
+  'layer1-specify.11': 'Exemplo de regra',
+  'layer1-specify.12': 'Uma screen declarativa deve expor estado observado, delegar regras de negócio para um ViewModel e evitar lógica de domínio na camada visual.',
+  'layer1-specify.13': '↓ Veja um exemplo prático de contrato',
+  'layer1-specify.14': '1️⃣ Layer 1 · SPECIFY',
+  'layer1-specify.15': 'Exemplo de contrato:',
+  'layer1-specify.16': 'screen.contract.json',
+  'layer1-specify.17': '{
+  "required": ["structure", "properties", "methods"],
+  "properties": {
+    "structure": {
+      "properties": {
+        "type": { "const": "struct" },
+        "name": { "pattern": "^[A-Z][A-Za-z0-9]*Screen$" }
+      }
+    },
+    "properties": {
+      "viewModel": {
+        "properties": {
+          "wrapper": { "const": "@ObservedObject" }
+        }
+      }
+    }
+  }
+}',
+  'layer1-specify.18': 'Contrato descreve forma esperada',
+  'layer1-specify.19': 'YAML adiciona severidade e escopo',
+  'layer1-specify.20': 'Erro vira feedback objetivo',
+
+  // — Layer2 Design —
+  'layer2-design.0': '2️⃣ Layer 2 · DESIGN',
+  'layer2-design.1': 'Agents and skills specialize AI behavior for recurring work',
+  'layer2-design.2': 'O que é e por que importa',
+  'layer2-design.3': 'O que é:',
+  'layer2-design.4': 'agentes customizados e skills focadas por tipo de trabalho.',
+  'layer2-design.5': 'Por que:',
+  'layer2-design.6': 'consistência, reuso e preservação de contexto operacional.',
+  'layer2-design.7': 'Exemplo genérico:',
+  'layer2-design.8': 'um agente',
+  'layer2-design.9': 'feature-implementation',
+  'layer2-design.10': 'segue checklist de arquitetura, testes e evidências.',
+  'layer2-design.11': 'Prática de mercado:',
+  'layer2-design.12': 'sistemas multiagente, workflow automation e playbooks operacionais.',
+  'layer2-design.13': 'Ideia central',
+  'layer2-design.14': 'Em vez de reescrever prompts do zero a cada tarefa, o time encapsula comportamento esperado, referências obrigatórias e formato de saída.',
+  'layer2-design.15': 'Exemplo proposto: agent wrapper + binding',
+  'layer2-design.16': '# .ai/agents/feature-implementation.agent.md
+name: feature-implementation
+read_and_follow:
+  - .ai/skills/feature-implementation/SKILL.md
+focus:
+  - architecture patterns
+  - required tests
+  - validation evidence
+
+# .ai/skills/feature-implementation/agents/openai.yaml
+interface:
+  display_name: "Feature Implementation"
+  short_description: "Implement new capabilities with quality gates"',
+  'layer2-design.17': 'Esse desenho ajuda times a transformar conhecimento operacional em um ativo reutilizável, em vez de depender de memória individual.',
+
+  // — Layer3 Tasks —
+  'layer3-tasks.0': '3️⃣ Layer 3 · TASKS',
+  'layer3-tasks.1': 'Independent execution and judgment improve impartiality and quality',
+  'layer3-tasks.2': 'O que é e por que importa',
+  'layer3-tasks.3': 'O que é:',
+  'layer3-tasks.4': 'subagentes ou fluxos de validação executados sem compartilhar contexto da implementação.',
+  'layer3-tasks.5': 'Por que:',
+  'layer3-tasks.6': 'reduz viés de confirmação e permite validação paralela.',
+  'layer3-tasks.7': 'Exemplo genérico:',
+  'layer3-tasks.8': 'um validador carrega contratos e regras do zero antes de julgar o output.',
+  'layer3-tasks.9': 'Prática de mercado:',
+  'layer3-tasks.10': 'quality gates, pipelines de CI/CD e segregação entre build e approval.',
+  'layer3-tasks.11': 'Princípio útil',
+  'layer3-tasks.12': 'Quem executa não deveria ser a única fonte de verdade sobre se o resultado está correto.',
+  'layer3-tasks.13': 'Fluxo proposto: validação sem contexto compartilhado',
+  'layer3-tasks.14': 'Implementation Agent → submits → Validation Agent
+                               ├─ Load contracts
+                               ├─ Load rules
+                               ├─ Run checks
+                               └─ Report violations',
+  'layer3-tasks.15': 'Julgamento imparcial',
+  'layer3-tasks.16': 'Validação paralela',
+  'layer3-tasks.17': 'Achados reproduzíveis',
+
+  // — Layer4 Execute —
+  'layer4-execute.0': '4️⃣ Layer 4 · EXECUTE',
+  'layer4-execute.1': 'Harnesses and gates turn intent into automated enforcement',
+  'layer4-execute.2': 'O que é e por que importa',
+  'layer4-execute.3': 'O que é:',
+  'layer4-execute.4': 'scripts, validadores e quality gates executados antes e depois da geração.',
+  'layer4-execute.5': 'Por que:',
+  'layer4-execute.6': 'decisões baseadas em evidência, com bloqueio objetivo quando algo viola contratos.',
+  'layer4-execute.7': 'Exemplo genérico:',
+  'layer4-execute.8': 'validação de contratos, nomenclatura, camadas arquiteturais e cobertura mínima.',
+  'layer4-execute.9': 'Prática de mercado:',
+  'layer4-execute.10': 'linters, static analysis, pre-commit hooks e pipelines automatizados.',
+  'layer4-execute.11': 'Exemplo proposto: execução de checks',
+  'layer4-execute.12': 'validate_contracts.sh
+
+validate_naming "$file" "^[A-Z][A-Za-z0-9]*(Screen|ViewModel)$"
+validate_layering "$file" "presentation"
+validate_architecture_compliance "$file"
+
+if [ $VIOLATIONS -eq 0 ]; then
+  echo "✅ All contracts validated successfully"
+else
+  echo "❌ Fix violations before merge"
+  exit 1
+fi',
+  'layer4-execute.13': 'Contract validation:',
+  'layer4-execute.14': 'garante forma e estrutura esperadas.',
+  'layer4-execute.15': 'Architecture compliance:',
+  'layer4-execute.16': 'impede mistura indevida de camadas.',
+  'layer4-execute.17': 'Objective blocking:',
+  'layer4-execute.18': 'falha explícita antes de virar PR ou release.',
+  'layer4-execute.19': 'Pre-commit',
+  'layer4-execute.20': 'Erro aparece antes de contaminar o branch.',
+  'layer4-execute.21': 'CI/CD',
+  'layer4-execute.22': 'A mesma régua vale para todo o time.',
+  'layer4-execute.23': 'Evidência',
+  'layer4-execute.24': 'Cada bloqueio aponta exatamente o que precisa ser corrigido.',
+
+  // — E2E Example —
+  'e2e-example.0': '🔄 E2E Example',
+  'e2e-example.1': 'Fluxo proposto: “Implementar uma payment confirmation screen”',
+  'e2e-example.2': '1',
+  'e2e-example.3': 'Specify',
+  'e2e-example.4': 'O time define contrato da screen, contrato do ViewModel, critérios de aceite e regras de arquitetura.',
+  'e2e-example.5': '2',
+  'e2e-example.6': 'Design',
+  'e2e-example.7': 'O agente',
+  'e2e-example.8': 'feature-implementation',
+  'e2e-example.9': 'carrega skill, exemplos permitidos e formato esperado de entrega.',
+  'e2e-example.10': '3',
+  'e2e-example.11': 'Tasks',
+  'e2e-example.12': 'Um validador independente revisa estrutura, separação de camadas e aderência às regras sem herdar contexto.',
+  'e2e-example.13': '4',
+  'e2e-example.14': 'Execute',
+  'e2e-example.15': 'Harness roda checks automatizados e publica resultado verificável para o time.',
+  'e2e-example.16': '✅ Screen contract',
+  'e2e-example.17': '✅ ViewModel contract',
+  'e2e-example.18': '✅ Arch compliance',
+
+  // — Benefits —
+  'benefits.0': '✅ Benefits',
+  'benefits.1': 'Why this approach tends to outperform ad hoc prompting',
+  'benefits.2': '⚡ Velocidade',
+  'benefits.3': 'Iterações ficam mais rápidas porque a IA opera com contexto e critérios já estruturados.',
+  'benefits.4': '🛡️ Qualidade',
+  'benefits.5': 'Validação automatizada captura problemas cedo, antes de review tardio ou regressão.',
+  'benefits.6': '🧭 Consistência',
+  'benefits.7': 'O time passa a repetir os mesmos padrões em tarefas similares.',
+  'benefits.8': '📚 Conhecimento',
+  'benefits.9': 'Boas práticas ficam documentadas na estrutura, não apenas na memória das pessoas.',
+  'benefits.10': '📈 Escalabilidade',
+  'benefits.11': 'Novas pessoas entram mais rápido porque os caminhos esperados estão explícitos.',
+  'benefits.12': '🤝 Colaboração',
+  'benefits.13': 'Produto, engenharia e QA passam a discutir evidência, não apenas opinião.',
+
+  // — Tradeoffs Costs —
+  'tradeoffs-costs.0': '⚖️ Trade-offs',
+  'tradeoffs-costs.1': 'There is an adoption cost — and it pays off more in some contexts',
+  'tradeoffs-costs.2': 'Custos e riscos reais',
+  'tradeoffs-costs.3': 'Investimento inicial em setup, curadoria e treinamento.',
+  'tradeoffs-costs.4': 'Necessidade de manter contratos, regras e agentes atualizados.',
+  'tradeoffs-costs.5': 'Risco de rigidez excessiva se tudo virar bloqueio.',
+  'tradeoffs-costs.6': 'Equilíbrio necessário entre enforcement e flexibilidade para casos novos.',
+  'tradeoffs-costs.7': 'Quando tende a valer a pena',
+  'tradeoffs-costs.8': 'Team size:',
+  'tradeoffs-costs.9': 'mais de 3 pessoas colaborando no mesmo fluxo.',
+  'tradeoffs-costs.10': 'Duração:',
+  'tradeoffs-costs.11': 'projetos com horizonte acima de 6 meses.',
+  'tradeoffs-costs.12': 'Qualidade:',
+  'tradeoffs-costs.13': 'produtos onde erro custa caro.',
+  'tradeoffs-costs.14': 'Repetição:',
+  'tradeoffs-costs.15': 'domínios com padrões que podem ser formalizados.',
+
+  // — How To Start —
+  'how-to-start.0': '🚀 Getting Started',
+  'how-to-start.1': 'How a team can begin adopting this architecture',
+  'how-to-start.2': '1',
+  'how-to-start.3': 'Defina padrões de arquitetura',
+  'how-to-start.4': 'Liste o que precisa ser verdade para views, serviços, testes e fluxos críticos.',
+  'how-to-start.5': '2',
+  'how-to-start.6': 'Crie contratos dos componentes centrais',
+  'how-to-start.7': 'Comece por poucos contratos de alto valor para não criar rigidez prematura.',
+  'how-to-start.8': '3',
+  'how-to-start.9': 'Monte o harness de validação',
+  'how-to-start.10': 'Transforme regras importantes em checks automatizados e quality gates.',
+  'how-to-start.11': '4',
+  'how-to-start.12': 'Crie agentes para tarefas recorrentes',
+  'how-to-start.13': 'Formalize comportamento esperado para implementação, review e correções.',
+  'how-to-start.14': '5',
+  'how-to-start.15': 'Itere com feedback do time',
+  'how-to-start.16': 'Refine contratos, prompts, skills e gates com base em bugs e rework reais.',
+
+  // — Qa Summary —
+  'qa-summary.0': '❓ Summary &amp; Q&amp;A',
+  'qa-summary.1': 'Spec-driven, layered, automated, and enforceable',
+  'qa-summary.2': 'Suggested next step: pilotar a abordagem com um time ou feature, medir resultado e evoluir a arquitetura com base em evidência. Perguntas são bem-vindas.',
+  'qa-summary.3': '📐 Spec-driven',
+  'qa-summary.4': '🏗️ Layered',
+  'qa-summary.5': '🤖 Automated',
+  'qa-summary.6': '✅ Enforceable',
+  'qa-summary.7': 'Presented by',
+  'qa-summary.8': 'Renato S. Machado Filho',
+};

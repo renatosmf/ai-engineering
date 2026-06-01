@@ -1,15 +1,19 @@
 /**
  * Internationalization service.
- * Manages locale state, loads translations, and notifies subscribers.
- * Open/Closed: new locales require only a new data module — no changes here.
+ * Manages locale state, templates, string bundles, and notifies subscribers.
+ * Open/Closed: new locales require only a new strings module — no changes here.
  */
 
 import { getItem, setItem } from './storage.service.js';
+import { interpolateSlides } from './template.service.js';
 
 const STORAGE_KEY = 'language';
 const DEFAULT_LOCALE = 'pt-BR';
 
-/** @type {Map<string, object>} */
+/** @type {string[]} Shared HTML templates */
+let templates = [];
+
+/** @type {Map<string, Record<string, string>>} locale → strings */
 const registry = new Map();
 
 /** @type {Set<(locale: string) => void>} */
@@ -18,28 +22,46 @@ const listeners = new Set();
 let currentLocale = getItem(STORAGE_KEY) ?? DEFAULT_LOCALE;
 
 /**
- * Register a translation bundle for a locale.
- * @param {string} locale
- * @param {object} translations
+ * Set the shared slide templates (called once at bootstrap).
+ * @param {string[]} slideTemplates
  */
-export const registerLocale = (locale, translations) => {
-  registry.set(locale, translations);
+export const setTemplates = (slideTemplates) => {
+  templates = slideTemplates;
 };
 
 /**
- * @returns {string[]} Available locale codes
+ * Register a string bundle for a locale.
+ * @param {string} locale
+ * @param {Record<string, string>} strings
  */
+export const registerLocale = (locale, strings) => {
+  registry.set(locale, strings);
+};
+
+/** @returns {string[]} Available locale codes */
 export const getAvailableLocales = () => [...registry.keys()];
 
-/**
- * @returns {string} Current active locale
- */
+/** @returns {string} Current active locale */
 export const getCurrentLocale = () => currentLocale;
 
 /**
- * @returns {object | undefined} Translations for the current locale
+ * Get the resolved content for the current locale.
+ * Interpolates templates with locale strings on each call.
+ * @returns {{ slides: string[], htmlLang: string, title: string, metaDescription: string, selectorLabel: string, footer: string } | undefined}
  */
-export const getTranslations = () => registry.get(currentLocale);
+export const getTranslations = () => {
+  const strings = registry.get(currentLocale);
+  if (!strings) return undefined;
+
+  return {
+    slides: interpolateSlides(templates, strings),
+    htmlLang: strings['meta.htmlLang'],
+    title: strings['meta.title'],
+    metaDescription: strings['meta.metaDescription'],
+    selectorLabel: strings['meta.selectorLabel'],
+    footer: strings['meta.footer'],
+  };
+};
 
 /**
  * Switch to a different locale.
