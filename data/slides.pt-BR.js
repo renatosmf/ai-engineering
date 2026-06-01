@@ -836,6 +836,7 @@ fi</code></pre>
                   <span class="chip">🤖 Automated</span>
                   <span class="chip">✅ Enforceable</span>
                 </div>
+                <p style="margin-top: 36px; font-size: 0.7em; color: var(--muted); text-align: center;">Apresentação por <strong style="color: var(--text-strong);">Renato S. Machado Filho</strong></p>
               </div>
             </div>
           </section>`
