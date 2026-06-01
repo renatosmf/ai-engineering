@@ -1,0 +1,80 @@
+/* === Reveal.js Overrides === */
+.reveal {
+  font-size: 30px;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  padding: 10px 0;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  text-transform: none;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 0.35em;
+}
+
+.reveal h1 {
+  font-size: 2.15em;
+  line-height: 1.04;
+}
+
+.reveal h2 {
+  font-size: 1.45em;
+}
+
+.reveal h3 {
+  font-size: 1em;
+  color: var(--primary);
+}
+
+.reveal h4 {
+  font-size: 0.8em;
+  color: var(--primary);
+}
+
+.reveal p,
+.reveal li,
+.reveal td,
+.reveal th {
+  color: var(--text);
+  line-height: 1.35;
+  font-size: 0.88em;
+}
+
+.reveal strong {
+  color: var(--text-strong);
+}
+
+.reveal pre {
+  width: 100%;
+  margin: 0;
+  border-radius: 18px;
+  font-size: 0.41em;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.reveal code {
+  font-family: "SFMono-Regular", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  text-transform: none;
+}
+
+/* === Slide switching animation === */
+.slides-shell {
+  transition: opacity 220ms ease, transform 220ms ease, filter 220ms ease;
+}
+
+.slides-shell.is-switching {
+  opacity: 0.2;
+  transform: translateY(10px);
+  filter: saturate(0.8);
+}

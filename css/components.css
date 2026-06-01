@@ -1,0 +1,300 @@
+/* === Shared panel styles === */
+.hero,
+.panel,
+.card,
+.diagram,
+.callout,
+.conversation,
+.selector-shell {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.panel,
+.card,
+.diagram,
+.callout,
+.conversation {
+  border-radius: 24px;
+  padding: 24px 26px;
+}
+
+/* === Eyebrow label === */
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 8px 14px;
+  border: 1px solid rgba(88, 166, 255, 0.35);
+  border-radius: 999px;
+  color: var(--primary);
+  font-size: 0.48em;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  background: rgba(88, 166, 255, 0.08);
+}
+
+/* === Stat & Mini Cards === */
+.stat-card,
+.mini-card {
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stat-card .value,
+.mini-card .value {
+  font-size: 1em;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 6px;
+  word-wrap: break-word;
+}
+
+.stat-card .muted,
+.mini-card .muted {
+  font-size: 0.85em;
+  line-height: 1.4;
+}
+
+/* === Chips & Badges === */
+.chip-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.chip,
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.48em;
+  color: var(--text);
+  background: rgba(88, 166, 255, 0.1);
+  border: 1px solid rgba(88, 166, 255, 0.24);
+}
+
+.badge.success { background: rgba(52, 211, 153, 0.15); color: var(--success); }
+.badge.warning { background: rgba(251, 191, 36, 0.15); color: var(--warning); }
+.badge.danger  { background: rgba(251, 113, 133, 0.15); color: var(--danger); }
+.badge.info    { background: rgba(108, 182, 255, 0.14); color: var(--primary); }
+
+/* === Diagram === */
+.diagram {
+  background: var(--panel-strong);
+}
+
+/* === Flow boxes & Agent nodes === */
+.flow-box,
+.agent-node {
+  flex: 1 1 auto;
+  min-width: min(100%, 180px);
+  max-width: 280px;
+  min-height: 100px;
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  position: relative;
+}
+
+.flow-box h4,
+.agent-node h4 {
+  font-size: 0.9em;
+  margin-bottom: 8px;
+}
+
+.flow-box p,
+.agent-node p {
+  font-size: 0.75em;
+  line-height: 1.5;
+}
+
+.flow-box::after,
+.agent-node::after {
+  content: "➜";
+  position: absolute;
+  right: -13px;
+  top: 43%;
+  color: var(--accent);
+  font-size: 0.85em;
+}
+
+.flow-box:last-child::after,
+.agent-node:last-child::after {
+  display: none;
+}
+
+/* === Timeline steps === */
+.timeline-step {
+  position: relative;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  min-height: 190px;
+}
+
+.timeline-step::after {
+  content: "→";
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary);
+  font-size: 1em;
+}
+
+.timeline-step:last-child::after {
+  display: none;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+/* === Messages (conversation) === */
+.message {
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  margin-top: 12px;
+}
+
+.message strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.64em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.message.user strong { color: var(--primary); }
+.message.ai strong   { color: var(--accent); }
+.message.note strong { color: var(--warning); }
+
+/* === Callout === */
+.callout {
+  border-left: 4px solid var(--accent);
+}
+
+/* === Quote === */
+.quote {
+  font-size: 0.84em;
+  line-height: 1.4;
+  color: var(--text);
+  border-left: 4px solid var(--accent);
+  padding-left: 18px;
+  margin: 18px 0 0;
+}
+
+/* === Metric Table === */
+table.metric-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.58em;
+  margin-top: 14px;
+}
+
+.metric-table th,
+.metric-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.metric-table th {
+  color: var(--primary);
+}
+
+/* === Language Selector === */
+.selector-shell {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: var(--toggle-bg);
+  transition: transform 220ms ease, opacity 220ms ease, background 220ms ease;
+}
+
+.selector-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.selector-buttons {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 999px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.lang-button {
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: var(--toggle-button);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+.lang-button:hover,
+.lang-button:focus-visible {
+  transform: translateY(-1px);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(108, 182, 255, 0.22);
+}
+
+.lang-button.active {
+  background: var(--toggle-button-active);
+  color: #ffffff;
+}
+
+/* === Q&A section === */
+.qa {
+  display: grid;
+  place-items: center;
+  min-height: 560px;
+  text-align: center;
+}
+
+.hero-question {
+  font-size: 1.55em;
+  font-weight: 800;
+  margin-top: 8px;
+}

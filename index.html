@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Desenvolvimento Assistido por IA</title>
+  <meta name="description" content="Apresentação Reveal.js sobre desenvolvimento assistido por IA para pessoas desenvolvedoras iniciantes no tema." />
+
+  <!-- Reveal.js Core -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/monokai.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/print/paper.css" media="print" />
+
+  <!-- Application Styles (layered) -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/presentation.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <!-- Language Selector -->
+  <div class="selector-shell" aria-label="Language selector">
+    <span class="selector-label" id="selectorLabel">Idioma</span>
+    <div class="selector-buttons" role="group" aria-labelledby="selectorLabel">
+      <button class="lang-button active" type="button" data-lang="pt-BR">PT-BR</button>
+      <button class="lang-button" type="button" data-lang="en-US">EN-US</button>
+    </div>
+  </div>
+
+  <!-- Presentation Container -->
+  <div class="reveal slides-shell" id="presentationRoot">
+    <div class="slides" id="slides"></div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer-note" id="footerNote"></div>
+
+  <!-- Reveal.js Runtime (must load before modules) -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+
+  <!-- Application Entry Point -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

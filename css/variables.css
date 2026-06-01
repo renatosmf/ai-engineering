@@ -1,0 +1,57 @@
+:root {
+  color-scheme: dark light;
+
+  /* Background */
+  --bg: #08111f;
+  --bg-soft: #0f1b2d;
+
+  /* Panels */
+  --panel: rgba(16, 25, 42, 0.82);
+  --panel-strong: rgba(11, 18, 32, 0.92);
+
+  /* Text */
+  --text: #e8eef8;
+  --text-strong: #ffffff;
+  --muted: #9eb0cc;
+
+  /* Brand Colors */
+  --primary: #6cb6ff;
+  --secondary: #8b9cff;
+  --accent: #2dd4bf;
+
+  /* Semantic Colors */
+  --danger: #fb7185;
+  --warning: #fbbf24;
+  --success: #34d399;
+
+  /* Borders & Shadows */
+  --border: rgba(148, 163, 184, 0.24);
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+
+  /* Toggle UI */
+  --toggle-bg: rgba(8, 17, 31, 0.82);
+  --toggle-button: rgba(255, 255, 255, 0.06);
+  --toggle-button-active: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #eef4fb;
+    --bg-soft: #dbe7f7;
+    --panel: rgba(255, 255, 255, 0.9);
+    --panel-strong: rgba(255, 255, 255, 0.97);
+    --text: #0f1f32;
+    --text-strong: #08111f;
+    --muted: #47607f;
+    --primary: #1d4ed8;
+    --secondary: #4338ca;
+    --accent: #0f766e;
+    --danger: #be123c;
+    --warning: #a16207;
+    --success: #047857;
+    --border: rgba(15, 23, 42, 0.12);
+    --shadow: 0 22px 50px rgba(37, 99, 235, 0.14);
+    --toggle-bg: rgba(255, 255, 255, 0.9);
+    --toggle-button: rgba(15, 23, 42, 0.06);
+  }
+}
